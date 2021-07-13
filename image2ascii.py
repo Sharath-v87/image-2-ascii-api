@@ -4,7 +4,7 @@ import PIL.Image
 gscale=["@","#","S","%","?","*","+",";",":"," ","."]
 
 #image resizing to desired width and grayscaling
-img = PIL.Image.open("ros.png")
+img = PIL.Image.open("assets/ros.png")
 width=100
 W,H = img.size
 ratio = H/W
