@@ -1,0 +1,5 @@
+.DS_Store
+*env
+assets
+__pycache__
+file.txt

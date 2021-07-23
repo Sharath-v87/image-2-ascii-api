@@ -7,10 +7,6 @@ app = FastAPI()
 def insert_newlines(string, every=64):
     return '\n'.join(string[i:i+every] for i in range(0, len(string), every))
 
-@app.post("/files/")
-async def create_file(file: bytes = File(...)):
-    return {"file_size": len(file)}
-
 
 @app.post("/uploadfile/")
 
