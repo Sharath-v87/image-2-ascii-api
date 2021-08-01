@@ -1,7 +1,7 @@
 import requests
 
 path=input("enter the path of your image : ")
-baseurL='http://127.0.0.1:8000/uploadfile/'
+baseurL='https://image2ascii.herokuapp.com/uploadfile/'
 f = open(path, 'rb')
 files = {"file": (f.name, f, "multipart/form-data")}
 x=requests.post(url=baseurL, files=files)
