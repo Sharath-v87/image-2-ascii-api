@@ -7,9 +7,11 @@ app = FastAPI()
 def insert_newlines(string, every=64):
     return '\n'.join(string[i:i+every] for i in range(0, len(string), every))
 
+@app.get("/")
+async def home():
+    return {"home": "Welcome to Image2ascii API"}
 
 @app.post("/uploadfile/")
-
 async def create_upload_file(file: UploadFile = File(...)):
     a=await file.read()
     image=PIL.Image.open(BytesIO(a))
